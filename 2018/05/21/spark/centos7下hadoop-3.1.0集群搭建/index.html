@@ -5,16 +5,20 @@
   
 
   
-  <title>粗茶淡饭</title>
+  <title>centos7下hadoop-3.1.0集群搭建 | 粗茶淡饭</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="程序员，架构师">
-<meta property="og:type" content="website">
-<meta property="og:title" content="粗茶淡饭">
-<meta property="og:url" content="https://zhangorrin.github.io/index.html">
+  <meta name="description" content="环境准备1.服务器概览    hostname ip 说明     node1.spark 192.168.2.140 node1节点(master)   node2.spark 192.168.2.141 node2节点   node3.spark 192.168.2.142 node3节点    分别在三台服务器上执行以下命令 123456789101112131415161718#添加hos">
+<meta name="keywords" content="程序员，架构师">
+<meta property="og:type" content="article">
+<meta property="og:title" content="centos7下hadoop-3.1.0集群搭建">
+<meta property="og:url" content="https://zhangorrin.github.io/2018/05/21/spark/centos7下hadoop-3.1.0集群搭建/index.html">
 <meta property="og:site_name" content="粗茶淡饭">
+<meta property="og:description" content="环境准备1.服务器概览    hostname ip 说明     node1.spark 192.168.2.140 node1节点(master)   node2.spark 192.168.2.141 node2节点   node3.spark 192.168.2.142 node3节点    分别在三台服务器上执行以下命令 123456789101112131415161718#添加hos">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-05-21T07:08:12.151Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="粗茶淡饭">
+<meta name="twitter:title" content="centos7下hadoop-3.1.0集群搭建">
+<meta name="twitter:description" content="环境准备1.服务器概览    hostname ip 说明     node1.spark 192.168.2.140 node1节点(master)   node2.spark 192.168.2.141 node2节点   node3.spark 192.168.2.142 node3节点    分别在三台服务器上执行以下命令 123456789101112131415161718#添加hos">
   
     <link rel="alternate" href="/atom.xml" title="粗茶淡饭" type="application/atom+xml">
   
@@ -65,9 +69,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-spark/centos7下hadoop-3.1.0集群搭建" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-spark/centos7下hadoop-3.1.0集群搭建" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/05/21/spark/centos7下hadoop-3.1.0集群搭建/" class="article-date">
   <time datetime="2018-05-21T07:07:42.118Z" itemprop="datePublished">2018-05-21</time>
@@ -80,8 +82,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/21/spark/centos7下hadoop-3.1.0集群搭建/">centos7下hadoop-3.1.0集群搭建</a>
+    <h1 class="article-title" itemprop="name">
+      centos7下hadoop-3.1.0集群搭建
     </h1>
   
 
@@ -154,146 +156,19 @@
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-spark/windows10下spark本地开发环境搭建" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/05/14/spark/windows10下spark本地开发环境搭建/" class="article-date">
-  <time datetime="2018-05-14T03:33:35.565Z" itemprop="datePublished">2018-05-14</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/14/spark/windows10下spark本地开发环境搭建/">windows10下spark本地开发环境搭建</a>
-    </h1>
+    <a href="/2018/05/14/spark/windows10下spark本地开发环境搭建/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">windows10下spark本地开发环境搭建</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="系统环境安装"><a href="#系统环境安装" class="headerlink" title="系统环境安装"></a>系统环境安装</h2><p><strong>1. JDK7+ 安装</strong></p>
-<p>a.设置 JAVA_HOME 变量</p>
-<p>b.设置 Path 变量，添加 ;%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin</p>
-<p>c.设置 Classpath 添加： .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar</p>
-<p><strong>2. Scala 安装</strong></p>
-<p>下载地址：<a href="http://www.scala-lang.org/download/all.html" target="_blank" rel="noopener">http://www.scala-lang.org/download/all.html</a></p>
-<blockquote>
-<p>选择版本：2.12.5</p>
-</blockquote>
-<p>a.设置 SCALA_HOME 变量</p>
-<p>b.设置 Path 变量：添加 ;%SCALA_HOME%\bin</p>
-<p>c.设置 Classpath 添加：.;%SCALA_HOME%\bin;</p>
-<p><strong>3. Hadoop 安装</strong></p>
-<p>下载地址：<a href="https://archive.apache.org/dist/hadoop/common/" target="_blank" rel="noopener">https://archive.apache.org/dist/hadoop/common/</a> </p>
-<blockquote>
-<p>选择版本：3.1.0</p>
-</blockquote>
-<p>a.设置 HADOOP_HOME 变量</p>
-<p>b.设置 Path 变量：添加 ;%HADOOP_HOME%\bin</p>
-<p><strong>4. spark 安装</strong><br>下载地址：<a href="http://spark.apache.org/downloads.html" target="_blank" rel="noopener">http://spark.apache.org/downloads.html</a> </p>
-<blockquote>
-<p>选择版本：2.3.0</p>
-</blockquote>
-<p>解压后执行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">spark-2.3.0-bin-hadoop2.7\bin\spark-shell</span><br></pre></td></tr></table></figure></p>
-<p>上诉内容都准备好之后再次重新打开控制台输入spark-shell如果还有以上错误日志，那么请找到你的hadoop-3.1.0\bin目录找下里面有没有winutils.exe文件，如果没有的话，我们需要去下载winutils.exe，下载地址(<a href="https://github.com/steveloughran/winutils" target="_blank" rel="noopener">https://github.com/steveloughran/winutils</a> )<br>进入目录后找到你相应的hadoop目录–进入bin—找到winutils.exe文件下载。下载好之后我们把它放到 hadoop-3.1.0\bin 里面，确保该目录中有winutils.exe文件。</p>
-<p>完成后就需要在控制台输入一下命令来修改权限<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hadoop-3.1.0\bin\winutils.exe chmod 777 /tmp/hive</span><br><span class="line"></span><br><span class="line">#/tmp/hive 是存放数据的目录</span><br></pre></td></tr></table></figure></p>
-<p><strong>5. maven 安装</strong><br>下载地址：<a href="http://maven.apache.org/download.cgi" target="_blank" rel="noopener">http://maven.apache.org/download.cgi</a></p>
-<p>a.设置 MAVEN_HOME 变量</p>
-<p>b.设置 Path 变量：添加 ;%MAVEN_HOME%\bin\;</p>
-<p><strong>6. IntelliJ IDEA 安装</strong><br>下载地址：<a href="http://www.jetbrains.com" target="_blank" rel="noopener">http://www.jetbrains.com</a></p>
-<blockquote>
-<p>安装下载exe文件</p>
-</blockquote>
-<h2 id="IDE环境安装"><a href="#IDE环境安装" class="headerlink" title="IDE环境安装"></a>IDE环境安装</h2><p><strong>1.配置maven</strong><br>菜单路径：File&gt;&gt;Setting&gt;&gt;Build,Execution,Deployment&gt;&gt;Build Tools&gt;&gt;Maven<br>设置maven安装路径</p>
-<p><strong>2.Scala插件安装</strong><br>菜单路径：File&gt;&gt;Setting&gt;&gt;Plugins&gt;&gt;Browse Repositories<br>搜索Scala，安装 Scala(Version: 2018.1.9),SBT(Version: 1.8.0),SBT Executor(Version: 1.2.1)</p>
-<p><strong>3.新建maven项目</strong></p>
-<p>pom.xml<br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span><br><span class="line"><span class="tag">&lt;<span class="name">project</span> <span class="attr">xmlns</span>=<span class="string">"http://maven.apache.org/POM/4.0.0"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xmlns:xsi</span>=<span class="string">"http://www.w3.org/2001/XMLSchema-instance"</span></span></span><br><span class="line"><span class="tag">         <span class="attr">xsi:schemaLocation</span>=<span class="string">"http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">modelVersion</span>&gt;</span>4.0.0<span class="tag">&lt;/<span class="name">modelVersion</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>spark.orrin.com<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>word-count<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.0-SNAPSHOT<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">properties</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">spark.version</span>&gt;</span>2.3.0<span class="tag">&lt;/<span class="name">spark.version</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">scala.version</span>&gt;</span>2.11<span class="tag">&lt;/<span class="name">scala.version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">dependencies</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.spark<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spark-core_$&#123;scala.version&#125;<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spark.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.spark<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spark-streaming_$&#123;scala.version&#125;<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spark.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.spark<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spark-sql_$&#123;scala.version&#125;<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spark.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.spark<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spark-hive_$&#123;scala.version&#125;<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spark.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.spark<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spark-mllib_$&#123;scala.version&#125;<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>$&#123;spark.version&#125;<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;/<span class="name">dependencies</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="tag">&lt;<span class="name">build</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">plugins</span>&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.scala-tools<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-scala-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.15.2<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">executions</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">execution</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;<span class="name">goals</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">goal</span>&gt;</span>compile<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">                            <span class="tag">&lt;<span class="name">goal</span>&gt;</span>testCompile<span class="tag">&lt;/<span class="name">goal</span>&gt;</span></span><br><span class="line">                        <span class="tag">&lt;/<span class="name">goals</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;/<span class="name">execution</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">executions</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-compiler-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.6.0<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">source</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">source</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">target</span>&gt;</span>1.8<span class="tag">&lt;/<span class="name">target</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line"></span><br><span class="line">            <span class="tag">&lt;<span class="name">plugin</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.apache.maven.plugins<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>maven-surefire-plugin<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.19<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">configuration</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">skip</span>&gt;</span>true<span class="tag">&lt;/<span class="name">skip</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;/<span class="name">configuration</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">plugin</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;/<span class="name">plugins</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">build</span>&gt;</span></span><br><span class="line">    </span><br><span class="line"><span class="tag">&lt;/<span class="name">project</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
-<p><strong>4.配置JDK和Scala SDK</strong><br>菜单路径：Project Structure&gt;&gt;Platform Settings</p>
-<blockquote>
-<p>SDKs,添加上述安装的jdk</p>
-</blockquote>
-<blockquote>
-<p>Global Libraries,添加Scala SDK，选择上述安装的Scala，版本选择2.11,并将Scala SDK 2.11添加到当前项目</p>
-</blockquote>
-<p><strong>5.运行实例类</strong><br>新建Create Scala Class,Name=WordCount,Kind=Object<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.sparkstudy.wordcount</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> org.apache.spark.&#123;SparkConf, SparkContext&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">  *</span></span><br><span class="line"><span class="comment">  * <span class="doctag">@author</span> migu-orrin on 2018/5/3.</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">object WordCount &#123;</span><br><span class="line">  <span class="function">def <span class="title">main</span><span class="params">(args: Array[String])</span> </span>&#123;</span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">      * SparkContext 的初始化需要一个SparkConf对象</span></span><br><span class="line"><span class="comment">      * SparkConf包含了Spark集群的配置的各种参数</span></span><br><span class="line"><span class="comment">      */</span></span><br><span class="line">    val conf=<span class="keyword">new</span> SparkConf()</span><br><span class="line">      .setMaster(<span class="string">"local"</span>)<span class="comment">//启动本地化计算</span></span><br><span class="line">      .setAppName(<span class="string">"WordCount"</span>)<span class="comment">//设置本程序名称</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">//Spark程序的编写都是从SparkContext开始的</span></span><br><span class="line">    val sc=<span class="keyword">new</span> SparkContext(conf)</span><br><span class="line">    <span class="comment">//以上的语句等价与val sc=new SparkContext("local","testRdd")</span></span><br><span class="line">    val data=sc.textFile(<span class="string">"E:/data/wordcount.txt"</span>)<span class="comment">//读取本地文件</span></span><br><span class="line">    var result = data.flatMap(_.split(<span class="string">" "</span>))<span class="comment">//下划线是占位符，flatMap是对行操作的方法，对读入的数据进行分割</span></span><br><span class="line">      .map((_,<span class="number">1</span>))<span class="comment">//将每一项转换为key-value，数据是key，value是1</span></span><br><span class="line">      .reduceByKey(_+_)<span class="comment">//将具有相同key的项相加合并成一个</span></span><br><span class="line"></span><br><span class="line">    result.collect()<span class="comment">//将分布式的RDD返回一个单机的scala array，在这个数组上运用scala的函数操作，并返回结果到驱动程序</span></span><br><span class="line">      .foreach(println)<span class="comment">//循环打印</span></span><br><span class="line">    result.saveAsTextFile(<span class="string">"E:/data/wordcountres"</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>运行WordCount类,效果如下：<br><code>`
-18/05/03 17:34:50 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 41 ms on localhost (executor driver) (1/1)
-18/05/03 17:34:50 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
-18/05/03 17:34:50 INFO DAGScheduler: ResultStage 1 (collect at WordCount.scala:27) finished in 0.051 s
-18/05/03 17:34:50 INFO DAGScheduler: Job 0 finished: collect at WordCount.scala:27, took 0.654681 s
-(hehe,2)
-(big,1)
-(he,1)
-(word,3)
-(hello,2)
-(adfads,1)
-18/05/03 17:34:50 INFO deprecation: mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
-18/05/03 17:34:50 INFO SparkContext: Starting job: runJob at SparkHadoopWriter.scala:78
-18/05/03 17:34:50 INFO DAGScheduler: Got job 1 (runJob at SparkHadoopWriter.scala:78) with 1 output partitions
-18/05/03 17:34:50 INFO DAGScheduler: Final stage: ResultStage 3 (runJob at SparkHadoopWriter.scala:78)
-18/05/03 17:34:50 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 2)</code></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://zhangorrin.github.io/2018/05/14/spark/windows10下spark本地开发环境搭建/" data-id="cjhfww03z0002eozjr4bufwbj" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-hello-blog" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2018/05/10/hello-blog/" class="article-date">
-  <time datetime="2018-05-10T08:26:38.979Z" itemprop="datePublished">2018-05-10</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/10/hello-blog/">Hello Blog</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>第一篇博客，开始积累，记录，分享.</p>
-<h2 id="Hello-Blog"><a href="#Hello-Blog" class="headerlink" title="Hello Blog"></a>Hello Blog</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">HelloBlog</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">		System.out.println(<span class="string">"Hello Blog"</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Connected to the target VM, address: &apos;127.0.0.1:52581&apos;, transport: &apos;socket&apos;</span><br><span class="line">Hello Blog</span><br><span class="line">Disconnected from the target VM, address: &apos;127.0.0.1:52581&apos;, transport: &apos;socket&apos;</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://zhangorrin.github.io/2018/05/10/hello-blog/" data-id="cjhfww01w0000eozj19s8peoz" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 
 </section>
         
